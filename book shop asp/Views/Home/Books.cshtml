@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Books";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Price</th>
+            <th scope="col">Pages</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Books book in ViewBag.Books)
+        {
+        <tr>
+            <th scope="row">@book.Id</th>
+            <td>@book.Title</td>
+            <td>@book.Authors.FirstName @book.Authors.LastName</td>
+            <td>@book.Genres.GenreName</td>
+            <td>@book.Publisher</td>
+            <td>@book.Price</td>
+            <td>@book.Pages</td>
+        </tr>
+        }
+    </tbody>
+</table>
+

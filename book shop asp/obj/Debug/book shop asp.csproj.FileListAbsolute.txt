@@ -1,0 +1,46 @@
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\ApplicationInsights.config
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\book shop asp.dll.config
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\book shop asp.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\book shop asp.pdb
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Antlr3.Runtime.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\EntityFramework.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\EntityFramework.SqlServer.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.Web.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Newtonsoft.Json.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.Helpers.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.Mvc.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.Optimization.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.Razor.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.WebPages.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.WebPages.Razor.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\WebGrease.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\EntityFramework.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\EntityFramework.SqlServer.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.Helpers.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.Mvc.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.Optimization.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.Razor.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.WebPages.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\System.Web.WebPages.Razor.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Antlr3.Runtime.pdb
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Newtonsoft.Json.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\bin\Microsoft.AI.Web.xml
+C:\Users\Данил\Desktop\book shop asp\book shop asp\obj\Debug\book shop asp.csprojResolveAssemblyReference.cache
+C:\Users\Данил\Desktop\book shop asp\book shop asp\obj\Debug\book shop asp.csproj.CoreCompileInputs.cache
+C:\Users\Данил\Desktop\book shop asp\book shop asp\obj\Debug\book shop asp.dll
+C:\Users\Данил\Desktop\book shop asp\book shop asp\obj\Debug\book shop asp.pdb
