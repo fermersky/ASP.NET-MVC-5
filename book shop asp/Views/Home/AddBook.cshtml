@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "AddBook";
+}
+
+<h2>AddBook</h2>
+
+<form method="post" action="/Home/CommitAdding">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" placeholder="Title" name="Title">
+    </div>
+    <div class="form-group">
+        <label>Publisher</label>
+        <input type="text" class="form-control" placeholder="Publisher" name="Publisher">
+    </div>
+    <div class="form-group">
+        <label>Select the author of book</label>
+        <select class="form-control" name="Id_Author">
+            @foreach (Authors aut in ViewBag.Authors)
+            {
+                <option value="@aut.Id">@aut.FirstName @aut.LastName</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Select the genre of book</label>
+        <select class="form-control" name="Id_Genre">
+            @foreach (Genres gen in ViewBag.Genres)
+            {
+                <option value="@gen.Id">@gen.GenreName</option>
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

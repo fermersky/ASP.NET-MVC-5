@@ -34,5 +34,20 @@ namespace book_shop_asp.Controllers
             ViewBag.Books = db.Books;
             return View();
         }
+
+        public ActionResult AddBook()
+        {
+            ViewBag.Authors = db.Authors;
+            ViewBag.Genres = db.Genres;
+            return View();
+        }
+
+        public void CommitAdding(Books book)
+        {
+            book.IsDeleted = false;
+            book.PublishDate = DateTime.Now;
+            db.Books.Add(book);
+            db.SaveChanges();
+        }
     }
 }
