@@ -13,6 +13,8 @@ namespace book_shop_asp
 
             bundles.Add(new StyleBundle("~/bundles/bootstrap-css").Include(
                       "~/Content/bootstrap*"));
+            bundles.Add(new StyleBundle("~/bundles/css").Include(
+                      "~/Content/Site.css"));
         }
     }
 }

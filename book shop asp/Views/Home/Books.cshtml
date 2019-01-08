@@ -1,6 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "Books";
+    ViewBag.loc_id = 1;
 }
 
 <table class="table">
@@ -16,16 +17,19 @@
         </tr>
     </thead>
     <tbody>
+       
         @foreach (Books book in ViewBag.Books)
         {
         <tr>
-            <th scope="row">@book.Id</th>
+            <th scope="row">@ViewBag.loc_id</th>
             <td>@book.Title</td>
             <td>@book.Authors.FirstName @book.Authors.LastName</td>
             <td>@book.Genres.GenreName</td>
             <td>@book.Publisher</td>
-            <td>@book.Price</td>
+            <td>@book.Price$</td>
             <td>@book.Pages</td>
+
+            @{ViewBag.loc_id += 1;}
         </tr>
         }
     </tbody>

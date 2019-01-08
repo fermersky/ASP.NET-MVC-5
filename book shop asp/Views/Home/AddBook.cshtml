@@ -5,32 +5,59 @@
 
 <h2>AddBook</h2>
 
-<form method="post" action="/Home/CommitAdding">
-    <div class="form-group">
-        <label>Title</label>
-        <input type="text" class="form-control" placeholder="Title" name="Title">
+<form method="post" action="/Home/CommitAdding" class="col-xs-12">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Title</label>
+            <input type="text" class="form-control" placeholder="Title" name="Title">
+        </div>
+        <div class="form-group col-md-8">
+            <label>Publisher</label>
+            <input type="text" class="form-control" placeholder="Publisher" name="Publisher">
+        </div>
     </div>
-    <div class="form-group">
-        <label>Publisher</label>
-        <input type="text" class="form-control" placeholder="Publisher" name="Publisher">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Select the author of book</label>
+            <select class="form-control" name="Id_Author">
+                @foreach (Authors aut in ViewBag.Authors)
+                {
+                    <option value="@aut.Id">@aut.FirstName @aut.LastName</option>
+                }
+            </select>
+        </div>
+        <div class="form-group col-md-8">
+            <label>Select the genre of book</label>
+            <select class="form-control" name="Id_Genre">
+                @foreach (Genres gen in ViewBag.Genres)
+                {
+                    <option value="@gen.Id">@gen.GenreName</option>
+                }
+            </select>
+        </div>
     </div>
-    <div class="form-group">
-        <label>Select the author of book</label>
-        <select class="form-control" name="Id_Author">
-            @foreach (Authors aut in ViewBag.Authors)
-            {
-                <option value="@aut.Id">@aut.FirstName @aut.LastName</option>
-            }
-        </select>
+    <div class="form-row">
+        <div class="from-group col-md-4">
+            <label>Price (from 1$ to 199$)</label>
+            <input type="range" max="199" min="1" name="Price" onchange="showVal();" id="input-range">
+            <span id="range-val">20</span><span>$</span>
+        </div>
+        <div class="from-group col-md-8">
+            <label>Pages count</label>
+            <input type="text" class="form-control" placeholder="Pages count" name="Pages">
+        </div>
     </div>
-    <div class="form-group">
-        <label>Select the genre of book</label>
-        <select class="form-control" name="Id_Genre">
-            @foreach (Genres gen in ViewBag.Genres)
-            {
-                <option value="@gen.Id">@gen.GenreName</option>
-            }
-        </select>
+    <div class="form-row">
+        <div class="form-group col-xs-12">
+            <button type="submit" class="btn btn-primary">Add book</button>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<script>
+    function showVal() {
+        var range = document.getElementById("input-range");
+        var span = document.getElementById("range-val");
+        span.innerHTML = range.value;
+    }
+</script>

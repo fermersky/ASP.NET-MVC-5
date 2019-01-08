@@ -31,7 +31,7 @@ namespace book_shop_asp.Controllers
 
         public ActionResult Books()
         {
-            ViewBag.Books = db.Books;
+            ViewBag.Books = db.Books.Where(b => b.IsDeleted == false);
             return View();
         }
 
@@ -39,6 +39,8 @@ namespace book_shop_asp.Controllers
         {
             ViewBag.Authors = db.Authors;
             ViewBag.Genres = db.Genres;
+            //Request.Params["a"] GET
+           // int a = Request.Form["d"]; POST
             return View();
         }
 
