@@ -39,8 +39,6 @@ namespace book_shop_asp.Controllers
         {
             ViewBag.Authors = db.Authors;
             ViewBag.Genres = db.Genres;
-            //Request.Params["a"] GET
-           // int a = Request.Form["d"]; POST
             return View();
         }
 
@@ -50,6 +48,12 @@ namespace book_shop_asp.Controllers
             book.PublishDate = DateTime.Now;
             db.Books.Add(book);
             db.SaveChanges();
+        }
+
+        public ActionResult BookOnCard()
+        {
+            ViewBag.Books = db.Books.Where(b => b.IsDeleted == false);
+            return View();
         }
     }
 }

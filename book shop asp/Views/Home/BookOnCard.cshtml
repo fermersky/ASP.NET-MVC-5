@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "BookOnCard";
+    ViewBag.path = "/Content/Authors/";
+}
+
+<link href="https://fonts.googleapis.com/css?family=Charm:400,700|Source+Sans+Pro:400,700,700i&amp;subset=cyrillic-ext" rel="stylesheet">
+<h2>BookOnCard</h2>
+
+<div class="row">
+    @foreach (Books book in ViewBag.Books)
+    {  
+        <div class="bookCard col-xs-3">
+            @{ViewBag.path = "/Content/Authors/" + book.Authors.FirstName + "_" + book.Authors.LastName + ".jpg";}
+            <img src=@ViewBag.path alt="Alternate Text" />
+            <div class="card-text">
+                <p class="genre">@book.Genres.GenreName</p>
+                <p class="title">@book.Title</p>
+                <p class="author">@book.Authors.FirstName  @book.Authors.LastName</p>
+            </div>
+        </div>
+    }
+</div>

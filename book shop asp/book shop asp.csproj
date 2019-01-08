@@ -248,6 +248,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Books.cshtml" />
     <Content Include="Views\Home\AddBook.cshtml" />
+    <Content Include="Views\Home\BookOnCard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

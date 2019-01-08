@@ -1,27 +1,105 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
+﻿    body {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+    .clearfix::after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 0px;
+        visibility: hidden;
+    }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
-}
+    /* Set padding to keep content from hitting the edges */
+    .body-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Override the default bootstrap behavior where horizontal description lists 
+       will truncate terms that are too long to fit in the left column 
+    */
+    .dl-horizontal dt {
+        white-space: normal;
+    }
+
+    .card-wrap {
+        perspective: 500px;
+    }
+
+
+    .bookCard {
+        position: relative;
+        height: 350px;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: 0.3s;
+        box-shadow: 10px 10px 15px 5px #ccc;
+
+        cursor: pointer;
+
+        margin-left: 30px; margin-bottom: 30px;
+    }
+
+        .bookCard:hover {
+            box-shadow: 10px 10px 15px 5px #eee;
+        }
+    
+    .bookCard:active {
+        transform: perspective(300px) scale3d(0.9, 0.9, 0.9);
+    }
+
+    .bookCard > img {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        min-height: 350px;
+
+        filter:opacity(30%);
+        z-index: 60;
+    }
+
+    .bookCard .card-text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        left: 0; top: 0;
+
+        box-sizing: border-box;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    p.genre {
+        font-size: 18px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    p.title {
+        font-size: 23px;
+        font-family: 'Charm', cursive;
+        font-style: italic;
+    }
+
+    p.author {
+        font-size: 16px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bold;
+        color: #e26a23
+    }
+
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
 
     input[type=range] {
         -webkit-appearance: none;
