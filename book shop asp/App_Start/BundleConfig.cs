@@ -23,7 +23,7 @@ namespace book_shop_asp
                       "~/Content/bootstrap.css",
                       "~/Content/boostrap-theme.css"));
 
-            bundles.Add(new StyleBundle("~/bundles/css").Include("~/Content/Site.css"));
+            bundles.Add(new StyleBundle("~/bundles/css").Include("~/Content/Site.css", "~/Content/main.css"));
         }
     }
 }

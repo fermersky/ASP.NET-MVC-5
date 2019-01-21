@@ -2,30 +2,75 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="index-wall">
+    <div class="menu container">
+        <div class="logo">
+            <a href="#"><h3>Books</h3></a>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a class="active-link" href="#">Home</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">AddBook</a></li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <h1 class="quot">“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.” </h1>
+    <div class="q-info">
+        <img class="q-img" src="~/Content/Images/haruki.jpg" alt="Alternate Text" />
+        <span class="q-aut">Haruki Murakami</span>
+    </div>
+
+    <div class="divider"></div>
+
+    <h4>That's simple!</h4>
+
+    <div class="guids">
+        <ul>
+            <li>
+                <div>
+                    <span>Choose book</span>
+                    <div class="number">1</div>
+                </div>
+            </li>
+            <li>
+                <span>then</span>
+            </li>
+            <li>
+                <div>
+                    <span>Buy book</span>
+                    <div class="number">2</div>
+                </div>
+            </li>
+            <li>
+                <span>then</span>
+            </li>
+            <li>
+                <div>
+                    <span>Read book</span>
+                    <div class="number">3</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+<div class="main">
+    <h3>Favourites</h3>
+    <div class="divider"></div>
+
+    <div class="book container">
+        <div class="aut-img">
+            <img src="~/Content/Authors/Lev_Tolstoi.jpg" alt="" />
+        </div>
+        <div class="book-info">
+            <h4 class="title">Voyna i Mir</h4>
+            <h5>Lev Tolstoi</h5>
+        </div>
     </div>
 </div>
