@@ -1,6 +1,8 @@
 ﻿    body {
-        padding-top: 50px;
-        padding-bottom: 20px;
+    }
+
+    li {
+        list-style-type: none;
     }
 
     .clearfix::after {
@@ -28,6 +30,12 @@
         perspective: 500px;
     }
 
+    .header {
+        background: #000;
+    }
+
+
+    /* CARD */
 
     .bookCard {
         position: relative;
@@ -36,15 +44,13 @@
         overflow: hidden;
         transition: 0.3s;
         box-shadow: 10px 10px 15px 5px #ccc;
-
         cursor: pointer;
-
         margin-left: 30px; margin-bottom: 30px;
     }
 
-        .bookCard:hover {
-            box-shadow: 10px 10px 15px 5px #eee;
-        }
+    .bookCard:hover {
+        box-shadow: 10px 10px 15px 5px #eee;
+    }
     
     .bookCard:active {
         transform: perspective(300px) scale3d(0.9, 0.9, 0.9);
@@ -55,7 +61,6 @@
         top: 0; left: 0;
         width: 100%;
         min-height: 350px;
-
         filter:opacity(30%);
         z-index: 60;
     }
@@ -94,12 +99,12 @@
     }
 
 
-/* Set width on the form input elements since they're 100% wide by default */
-    input,
-    select,
-    textarea {
-        max-width: 280px;
-    }
+/* SCROLLBAR */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
 
     input[type=range] {
         -webkit-appearance: none;

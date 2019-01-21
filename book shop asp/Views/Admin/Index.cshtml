@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    ViewBag.loc_id = 1;
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Price</th>
+            <th scope="col">Pages</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Books book in ViewBag.Books)
+        {
+            <tr>
+                <th scope="row">@ViewBag.loc_id</th>
+                <td>@book.Title</td>
+                <td>@book.Authors.FirstName @book.Authors.LastName</td>
+                <td>@book.Genres.GenreName</td>
+                <td>@book.Publisher</td>
+                <td>@book.Price$</td>
+                <td>@book.Pages</td>
+                <td><button type="button" class="btn btn-dark">Edit</button></td>
+
+                @{ViewBag.loc_id += 1;}
+            </tr>
+         }
+    </tbody>
+</table>
+
+
