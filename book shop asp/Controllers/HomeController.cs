@@ -17,6 +17,8 @@ namespace book_shop_asp.Controllers
             //new HttpUnauthorizedResult(); // er 401 - no access
             HttpContext.Response.Cookies["id"].Value = "1337"; // set cookie
             Session["name"] = "Daniel"; // set session
+            ViewBag.Books = db.Books.OrderBy(b => b.Id).Skip(1).Take(3);
+
             return View();
         }
 

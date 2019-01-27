@@ -1,14 +1,23 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <link href="~/Content/icons/style.css" rel="stylesheet" />
+
     <link href="~/Content/main.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300i,400,700,700i&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700,700i,800&amp;subset=cyrillic" rel="stylesheet">
+
 </head>
 <body>
     <div class="header container-fluid">
@@ -17,14 +26,82 @@
 
     <div class="body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            
-        </footer>
     </div>
+
+    <div class="footer container-fluid">
+        <h3>Books</h3>
+        <div class="nav">
+            <ul>
+                <li><a class="active-link" href="#">Home</a></li>
+                <li><a href="#">Books</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <input type="text" class="text-field" placeholder="Type message here..." name="name" value="" />
+            <input type="submit" class="contact-btn" name="name" value="Contact me" />
+        </div>
+
+        <div class="social">
+            <ul>
+                <li>
+                    <a href="https://github.com/fermersky" target="_blank">
+                        <i class="icon-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/d.srp" target="_blank">
+                        <i class="icon-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" onclick="copy('dskrypnik')">
+                        <i class="icon-telegram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="" onclick="copy('danilskrypnik.com')">
+                        <i class="icon-skype"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="hint"></div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/myscripts.js"></script>
     @RenderSection("scripts", required: false)
+
+    <script>
+        function copy(str)
+        {
+            event.preventDefault();
+            // Create new element
+            var el = document.createElement('textarea');
+            // Set value (string to be copied)
+            el.value = str;
+            // Set non-editable to avoid focus and move outside of view
+            el.setAttribute('readonly', '');
+            el.style = { position: 'absolute', left: '-9999px' };
+            document.body.appendChild(el);
+            // Select text inside element
+            el.select();
+            // Copy text to clipboard
+            document.execCommand('copy');
+            // Remove temporary element
+            document.body.removeChild(el);
+
+            var hint = document.getElementById("hint");
+            hint.innerHTML = "Copied to clipboard " + str;
+            $("#hint").animate({ "bottom": 50 }, 200);
+            $("#hint").animate({ "bottom": 50 }, 800);
+            $("#hint").animate({ "bottom": -80 }, 200);
+        }
+    </script>
 </body>
 </html>

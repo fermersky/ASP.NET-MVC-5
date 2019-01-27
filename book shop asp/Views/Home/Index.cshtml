@@ -2,6 +2,7 @@
     ViewBag.Title = "Home Page";
 }
 
+
 <div class="index-wall">
     <div class="menu container">
         <div class="logo">
@@ -13,7 +14,6 @@
                 <li><a href="#">Books</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">AddBook</a></li>
             </ul>
         </div>
     </div>
@@ -60,17 +60,67 @@
 
 </div>
 
-<div class="main">
-    <h3>Favourites</h3>
-    <div class="divider"></div>
-
-    <div class="book container">
-        <div class="aut-img">
-            <img src="~/Content/Authors/Lev_Tolstoi.jpg" alt="" />
+<div class="about container-fluid">
+    <div class="row">
+        <div class="text col-sm-6">
+            <h3>About us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis feugiat convallis. Morbi vel euismod turpis, quis laoreet justo. Nullam vulputate arcu vel aliquet luctus. Ut tempor iaculis mauris at sagittis. Maecenas pellentesque odio sit amet imperdiet sodales. Duis luctus ligula id dui pretium, a ornare velit convallis. Pellentesque non consectetur ipsum. Donec vel erat iaculis, ullamcorper est sit amet, elementum leo. Nunc pharetra porttitor quam. Suspendisse venenatis viverra ligula eget bibendum.</p>
+            <p>Quisque nec nulla felis. Ut ac lectus a elit molestie tincidunt vel quis diam. Phasellus non consequat dolor. Ut ut mollis est, eget ornare magna. Maecenas in vestibulum sapien. Maecenas vitae pharetra odio. In ligula magna, varius id ligula vel, pharetra convallis elit. Aenean a dignissim turpis. Integer dignissim augue eget elit ullamcorper sodales. Nunc sed velit fringilla, mattis dolor et, eleifend ipsum. Nulla malesuada, diam id gravida interdum, leo purus aliquet lorem, sit amet vehicula ligula est quis elit. Nam nec euismod quam. Sed tempor in eros et dignissim.</p>
         </div>
-        <div class="book-info">
-            <h4 class="title">Voyna i Mir</h4>
-            <h5>Lev Tolstoi</h5>
+        <div class="col-sm-6 authors-img-wrap">
+            <div class="authors-img">
+                <img src="~/Content/Authors/Franz_kafka.jpg" alt="Alternate Text" />
+                <img src="~/Content/Authors/Mikhail_Lermontov.jpg" alt="Alternate Text" />
+                <img src="~/Content/Authors/Taras_Shevchenko.jpg" alt="Alternate Text" />
+                <div class="filter-bg"></div>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="text2 col-sm-6">
+            <h3>What can we offer</h3>
+            <p>You may know many sites with a selling of books. Finaly, you found the best!</p>
+        </div>
+    </div>
+</div>
+
+<div class="main container-fluid">
+    @foreach (Books book in ViewBag.Books)
+    {
+    <div class="book">
+        @{ViewBag.Path = "/Content/Authors/" + book.Authors.FirstName + "_" + book.Authors.LastName + ".jpg";}
+        <div class="aut-img"><img src=@ViewBag.Path alt="Alternate Text" /></div>
+        <div class="bg"></div>
+
+        <div class="line blue"></div>
+        <div class="line red"></div>
+        <div class="line yellow"></div>
+
+        <div class="info-book">
+            <div class="title-book">
+                <h3>@book.Title</h3>
+                <h4>@book.Authors.FirstName @book.Authors.LastName</h4>
+            </div>
+            <div class="arrow up"></div>
+        </div>
+
+        <div class="head"></div>
+
+        <div class="about-book"></div>
+        <div class="fields">
+            <p><span class="col-name">Genre:</span><span class="col-value">@book.Genres.GenreName</span></p>
+            <p><span class="col-name">Publiser:</span><span class="col-value">@book.Publisher</span></p>
+            <p><span class="col-name">Pages:</span><span class="col-value">@book.Pages</span></p>
+
+            <div class="buy-btn">
+                <input type="submit" name="name" value="" />
+                <i class="icon-cart"></i>
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
