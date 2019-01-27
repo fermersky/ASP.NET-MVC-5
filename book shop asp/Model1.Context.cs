@@ -13,10 +13,10 @@ namespace book_shop_asp
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BookShopContext : DbContext
+    public partial class BookShopEntities : DbContext
     {
-        public BookShopContext()
-            : base("name=BookShopContext")
+        public BookShopEntities()
+            : base("name=BookShopEntities")
         {
         }
     
@@ -29,6 +29,7 @@ namespace book_shop_asp
         public virtual DbSet<Authors> Authors { get; set; }
         public virtual DbSet<Books> Books { get; set; }
         public virtual DbSet<Genres> Genres { get; set; }
+        public virtual DbSet<Messages> Messages { get; set; }
         public virtual DbSet<Sales> Sales { get; set; }
         public virtual DbSet<UserBooks> UserBooks { get; set; }
         public virtual DbSet<Users> Users { get; set; }

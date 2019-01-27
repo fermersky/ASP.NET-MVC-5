@@ -40,8 +40,11 @@
         </div>
 
         <div>
-            <input type="text" class="text-field" placeholder="Type message here..." name="name" value="" />
-            <input type="submit" class="contact-btn" name="name" value="Contact me" />
+            <form action="~/Home/AddMessage" method="post">
+                <input type="text" class="text-field" placeholder="Your name" name="Name" />
+                <input type="text" class="text-field" placeholder="Type message here..." name="Msg" />
+                <input type="submit" class="contact-btn" name="name" value="Contact me" />
+            </form>
         </div>
 
         <div class="social">

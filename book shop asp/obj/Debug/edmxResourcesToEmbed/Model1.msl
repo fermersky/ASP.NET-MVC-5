@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BookShopModelStoreContainer" CdmEntityContainer="BookShopContext">
+  <EntityContainerMapping StorageEntityContainer="BookShopModelStoreContainer" CdmEntityContainer="BookShopEntities">
     <EntitySetMapping Name="Admins">
       <EntityTypeMapping TypeName="BookShopModel.Admins">
         <MappingFragment StoreEntitySet="Admins">
@@ -43,6 +43,17 @@
         <MappingFragment StoreEntitySet="Genres">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="BookShopModel.Messages">
+        <MappingFragment StoreEntitySet="Messages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Msg" ColumnName="Msg" />
+          <ScalarProperty Name="U_ip" ColumnName="U_ip" />
+          <ScalarProperty Name="U_info" ColumnName="U_info" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

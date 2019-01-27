@@ -46,6 +46,16 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="GenreName" Type="varchar" MaxLength="40" />
         </EntityType>
+        <EntityType Name="Messages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="40" />
+          <Property Name="Msg" Type="varchar" MaxLength="120" />
+          <Property Name="U_ip" Type="varchar" MaxLength="30" />
+          <Property Name="U_info" Type="varchar" MaxLength="30" />
+        </EntityType>
         <EntityType Name="Sales">
           <Key>
             <PropertyRef Name="Id" />
@@ -136,6 +146,7 @@
           <EntitySet Name="Authors" EntityType="Self.Authors" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Genres" EntityType="Self.Genres" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Messages" EntityType="Self.Messages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserBooks" EntityType="Self.UserBooks" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
@@ -211,6 +222,16 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="GenreName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Books" Relationship="Self.FK__Books__Id_Genre__15502E78" FromRole="Genres" ToRole="Books" />
+        </EntityType>
+        <EntityType Name="Messages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Msg" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="U_ip" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="U_info" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Sales">
           <Key>
@@ -301,11 +322,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BookShopContext" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BookShopEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admins" />
           <EntitySet Name="Authors" EntityType="Self.Authors" />
           <EntitySet Name="Books" EntityType="Self.Books" />
           <EntitySet Name="Genres" EntityType="Self.Genres" />
+          <EntitySet Name="Messages" EntityType="Self.Messages" />
           <EntitySet Name="Sales" EntityType="Self.Sales" />
           <EntitySet Name="UserBooks" EntityType="Self.UserBooks" />
           <EntitySet Name="Users" EntityType="Self.Users" />
@@ -335,7 +357,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BookShopModelStoreContainer" CdmEntityContainer="BookShopContext">
+        <EntityContainerMapping StorageEntityContainer="BookShopModelStoreContainer" CdmEntityContainer="BookShopEntities">
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="BookShopModel.Admins">
               <MappingFragment StoreEntitySet="Admins">
@@ -378,6 +400,17 @@
               <MappingFragment StoreEntitySet="Genres">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="GenreName" ColumnName="GenreName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Messages">
+            <EntityTypeMapping TypeName="BookShopModel.Messages">
+              <MappingFragment StoreEntitySet="Messages">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Msg" ColumnName="Msg" />
+                <ScalarProperty Name="U_ip" ColumnName="U_ip" />
+                <ScalarProperty Name="U_info" ColumnName="U_info" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

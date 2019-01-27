@@ -8,7 +8,7 @@ namespace book_shop_asp.Controllers
 {
     public class AdminController : Controller
     {
-        private BookShopContext db = new BookShopContext();
+        private BookShopEntities db = new BookShopEntities();
         // GET: Admin
         public ActionResult Index()
         {

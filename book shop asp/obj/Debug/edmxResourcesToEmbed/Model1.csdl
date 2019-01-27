@@ -47,6 +47,16 @@
     <Property Name="GenreName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Books" Relationship="Self.FK__Books__Id_Genre__15502E78" FromRole="Genres" ToRole="Books" />
   </EntityType>
+  <EntityType Name="Messages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="Msg" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="U_ip" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="U_info" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
   <EntityType Name="Sales">
     <Key>
       <PropertyRef Name="Id" />
@@ -136,11 +146,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BookShopContext" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="BookShopEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Admins" EntityType="Self.Admins" />
     <EntitySet Name="Authors" EntityType="Self.Authors" />
     <EntitySet Name="Books" EntityType="Self.Books" />
     <EntitySet Name="Genres" EntityType="Self.Genres" />
+    <EntitySet Name="Messages" EntityType="Self.Messages" />
     <EntitySet Name="Sales" EntityType="Self.Sales" />
     <EntitySet Name="UserBooks" EntityType="Self.UserBooks" />
     <EntitySet Name="Users" EntityType="Self.Users" />
