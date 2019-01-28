@@ -81,13 +81,37 @@
 <div class="container-fluid">
     <div class="row">
         <div class="text2 col-sm-6">
-            <h3>What can we offer</h3>
-            <p>You may know many sites with a selling of books. Finaly, you found the best!</p>
+            <h3>READ</h3>   
         </div>
     </div>
 </div>
 
-<div class="main container-fluid">
+
+<div class="features">
+    <div class="feature">
+        <span>Anywhere</span>
+        <div class="line"></div>
+    </div>
+    <div class="feature">
+        <span>whenever</span>
+        <div class="line"></div>
+    </div>
+    <div class="feature">
+        <span>as much as you want</span>
+        <div class="line"></div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="text2 col-sm-6">
+            <h3>What can we offer</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias nemo beatae quibusdam non, a aliquam saepe eaque adipisci vero veniam!</p>
+        </div>
+    </div>
+</div>
+
+<div class="main">
     @foreach (Books book in ViewBag.Books)
     {
     <div class="book">
@@ -115,12 +139,13 @@
             <p><span class="col-name">Publiser:</span><span class="col-value">@book.Publisher</span></p>
             <p><span class="col-name">Pages:</span><span class="col-value">@book.Pages</span></p>
 
-            <div class="buy-btn">
-                <input type="submit" name="name" value="" />
+            <a class="buy-btn" href="/Home/BuyBook/@book.Id">
                 <i class="icon-cart"></i>
-            </div>
+            </a>
         </div>
     </div>
     }
 </div>
+
+<a hred="#" class="view-more-btn">View more</a>
 

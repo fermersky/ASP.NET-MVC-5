@@ -83,7 +83,7 @@ body {
                         padding-bottom: 10px;
                         font-weight: 700;
                         letter-spacing: 2px;
-                        font-size: 0.9em;
+                        font-size: 0.8em;
                         transition: .1s;
                         text-shadow: 2px 2px 8px #000000;
 
@@ -246,6 +246,10 @@ body {
             font-size: 2em;
             margin-bottom: 30px;
         }
+
+        p {
+            font-size: 0.9em;
+        }
     }
 
     .authors-img-wrap {
@@ -287,11 +291,47 @@ body {
     }
 }
 
-#kostyl-h3 {
-    color: $deep-blue;
-    font-size: 2em;
-    margin-bottom: 30px;
-    margin-left: 150px;
+.features {
+    width: 100%;
+    min-height: 500px;
+    background: url("./Images/bg2.jpeg");
+    background-size: cover;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 150px;
+
+    .feature {
+        width: 330px;
+        height: 330px;
+        background: $footer-bg;
+        opacity: .7;
+        border-radius: 50%;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        box-shadow: 0 4px 6px #000;
+
+        span {
+            color: #fff;
+            text-transform: uppercase;
+            font-style: italic;
+            font-size: 1.2em;
+        }
+
+        .line {
+            width: 57px;
+            height: 2px;
+            margin: 10px auto;
+            background: #fff;
+        }
+    }
 }
 
 .main {
@@ -299,10 +339,10 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 20px;
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0 150px;
+    width: 100%;
 
 
 
@@ -314,7 +354,7 @@ body {
         box-shadow: 6px 10px 30px 5px rgba(0, 0, 0, 0.37);
         overflow: hidden;
         margin-top: 80px;
-        margin-right: 50px;
+
 
         .line {
             height: 3px;
@@ -518,34 +558,22 @@ body {
                 transform: translateY(-50%);
                 cursor: pointer;
                 transition: .2s;
-
-                i {
-                    position: absolute;
-                    left: 9px;
-                    top: 10px;
-                    color: green;
-                    font-size: 0.7em;
-                    transition: .2s;
-                }
-
-                input {
-                    width: 30px;
-                    height: 30px;
-                    background: #fff;
-                    border: none;
-                    outline: none;
-                    border-radius: 50%;
-                    box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.2);
-                    transition: .2s;
-                    cursor: pointer;
-                }
+                width: 30px;
+                height: 30px;
+                background: #fff;
+                border: none;
+                outline: none;
+                border-radius: 50%;
+                box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.2);
+                transition: .2s;
+                cursor: pointer;
 
                 &:hover {
                     i {
                         color: #fff;
                     }
 
-                    input {
+                    & {
                         background: green;
                     }
                 }
@@ -557,8 +585,35 @@ body {
                         box-shadow: none;
                     }
                 }
+
+                i {
+                    position: absolute;
+                    left: 9px;
+                    top: 10px;
+                    color: green;
+                    font-size: 0.7em;
+                    transition: .2s;
+                }
             }
         }
+    }
+}
+
+.view-more-btn {
+    background: $accent-yellow;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 30px 0;
+    cursor: pointer;
+    box-shadow: 0 3px 15px 1px #ccc;
+    font-size: 0.9em;
+
+    &:hover {
+        background: lighten($accent-yellow, 10%);
     }
 }
 
@@ -566,7 +621,7 @@ body {
     min-height: 200px;
     height: auto;
     background: $footer-bg;
-    margin-top: 60px;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -701,4 +756,76 @@ body {
     border-radius: 5px;
     color: #000;
 
+}
+
+.standart-header {
+    width: 100%;
+    height: 80px;
+    background: url("./Images/books.jpg");
+    background-size: cover;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .menu {
+        align-self: stretch;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+
+        .logo a {
+            color: #fff;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 7px 7px 8px #000000;
+            font-family: 'Pacifico', cursive;
+
+            &:hover {
+                text-decoration: none;
+                color: $accent-blue;
+            }
+
+            &:visited {
+                color: #fff;
+            }
+        }
+
+        .nav {
+            .active-link {
+                border-bottom: 3px solid $accent-blue;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            & > ul {
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: row;
+
+                li {
+                    list-style-type: none;
+                    margin-left: 30px;
+
+                    a {
+                        color: #e0e0e0;
+                        text-transform: uppercase;
+                        padding-bottom: 10px;
+                        font-weight: 700;
+                        letter-spacing: 2px;
+                        font-size: 0.8em;
+                        transition: .1s;
+                        text-shadow: 2px 2px 8px #000000;
+
+                        &:hover {
+                            border-bottom: 3px solid $accent-blue;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

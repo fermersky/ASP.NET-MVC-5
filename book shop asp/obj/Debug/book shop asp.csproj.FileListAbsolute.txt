@@ -89,3 +89,4 @@ C:\Users\Данил\Desktop\ASP.NET-MVC-5\book shop asp\bin\Microsoft.AI.Web.xml
 C:\Users\Данил\Desktop\ASP.NET-MVC-5\book shop asp\obj\Debug\book shop asp.csproj.CoreCompileInputs.cache
 C:\Users\Данил\Desktop\ASP.NET-MVC-5\book shop asp\obj\Debug\book shop asp.dll
 C:\Users\Данил\Desktop\ASP.NET-MVC-5\book shop asp\obj\Debug\book shop asp.pdb
+C:\Users\Данил\Desktop\ASP.NET-MVC-5\book shop asp\obj\Debug\book shop asp.csprojResolveAssemblyReference.cache

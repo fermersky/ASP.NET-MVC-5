@@ -1,0 +1,9 @@
+﻿@helper ShowBooks(dynamic Books)
+{
+    <ul>
+        @foreach (var b in Books)
+        {
+            <li>@b.Title</li>
+        }
+    </ul>
+}

@@ -11,3 +11,10 @@
 <h3>ip @ViewBag.ip</h3>
 
 
+@Html.TextBox("Person", "Type name")
+@Html.DropDownList("Authors", ViewBag.Authors as SelectList)
+
+
+@MyHelpers.ShowBooks(ViewBag.Books) // App_Code is a reserved name for folder with helpers
+
+

@@ -57,6 +57,12 @@ namespace book_shop_asp.Controllers
             return RedirectPermanent("/Home/Index");
         }
 
+        public ActionResult BuyBook(int id)
+        {
+            ViewBag.BuyedBook = db.Books.Where(b => b.Id == id);
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -121,7 +127,11 @@ namespace book_shop_asp.Controllers
             ViewBag.user_agent = HttpContext.Request.UserAgent; // os
             ViewBag.url = HttpContext.Request.Url;
             ViewBag.ip = HttpContext.Request.UserHostAddress;
-            
+            ViewBag.Books = db.Books.ToList();
+
+            SelectList authors = new SelectList(db.Authors, "FirstName", "FirstName");
+            ViewBag.Authors = authors;
+
             return View();
         }
     }

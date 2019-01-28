@@ -58,7 +58,7 @@ body {
           padding-bottom: 10px;
           font-weight: 700;
           letter-spacing: 2px;
-          font-size: 0.9em;
+          font-size: 0.8em;
           transition: .1s;
           text-shadow: 2px 2px 8px #000000; }
           .index-wall .menu .nav > ul li a:hover {
@@ -178,6 +178,8 @@ body {
       color: #306084;
       font-size: 2em;
       margin-bottom: 30px; }
+    .about .text p {
+      font-size: 0.9em; }
   .about .authors-img-wrap {
     display: flex;
     flex-direction: column;
@@ -205,21 +207,49 @@ body {
         background: #306084;
         opacity: 0.75; }
 
-#kostyl-h3 {
-  color: #306084;
-  font-size: 2em;
-  margin-bottom: 30px;
-  margin-left: 150px; }
+.features {
+  width: 100%;
+  min-height: 500px;
+  background: url("./Images/bg2.jpeg");
+  background-size: cover;
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 150px; }
+  .features .feature {
+    width: 330px;
+    height: 330px;
+    background: #171B24;
+    opacity: .7;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 4px 6px #000; }
+    .features .feature span {
+      color: #fff;
+      text-transform: uppercase;
+      font-style: italic;
+      font-size: 1.2em; }
+    .features .feature .line {
+      width: 57px;
+      height: 2px;
+      margin: 10px auto;
+      background: #fff; }
 
 .main {
   height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 20px;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 0 150px; }
+  padding: 0 150px;
+  width: 100%; }
   .main .book {
     width: 301px;
     height: 406px;
@@ -227,8 +257,7 @@ body {
     border-radius: 3px;
     box-shadow: 6px 10px 30px 5px rgba(0, 0, 0, 0.37);
     overflow: hidden;
-    margin-top: 80px;
-    margin-right: 50px; }
+    margin-top: 80px; }
     .main .book .line {
       height: 3px;
       position: absolute;
@@ -380,7 +409,24 @@ body {
         top: 50%;
         transform: translateY(-50%);
         cursor: pointer;
-        transition: .2s; }
+        transition: .2s;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.2);
+        transition: .2s;
+        cursor: pointer; }
+        .main .book .fields .buy-btn:hover i {
+          color: #fff; }
+        .main .book .fields .buy-btn:hover {
+          background: green; }
+        .main .book .fields .buy-btn:active {
+          top: 60%; }
+          .main .book .fields .buy-btn:active input {
+            box-shadow: none; }
         .main .book .fields .buy-btn i {
           position: absolute;
           left: 9px;
@@ -388,30 +434,27 @@ body {
           color: green;
           font-size: 0.7em;
           transition: .2s; }
-        .main .book .fields .buy-btn input {
-          width: 30px;
-          height: 30px;
-          background: #fff;
-          border: none;
-          outline: none;
-          border-radius: 50%;
-          box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.2);
-          transition: .2s;
-          cursor: pointer; }
-        .main .book .fields .buy-btn:hover i {
-          color: #fff; }
-        .main .book .fields .buy-btn:hover input {
-          background: green; }
-        .main .book .fields .buy-btn:active {
-          top: 60%; }
-          .main .book .fields .buy-btn:active input {
-            box-shadow: none; }
+
+.view-more-btn {
+  background: #F9EE2D;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 30px 0;
+  cursor: pointer;
+  box-shadow: 0 3px 15px 1px #ccc;
+  font-size: 0.9em; }
+  .view-more-btn:hover {
+    background: #faf25f; }
 
 .footer {
   min-height: 200px;
   height: auto;
   background: #171B24;
-  margin-top: 60px;
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -511,3 +554,52 @@ body {
   text-align: center;
   border-radius: 5px;
   color: #000; }
+
+.standart-header {
+  width: 100%;
+  height: 80px;
+  background: url("./Images/books.jpg");
+  background-size: cover;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .standart-header .menu {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; }
+    .standart-header .menu .logo a {
+      color: #fff;
+      font-style: italic;
+      font-weight: bold;
+      text-shadow: 7px 7px 8px #000000;
+      font-family: 'Pacifico', cursive; }
+      .standart-header .menu .logo a:hover {
+        text-decoration: none;
+        color: #17bdfc; }
+      .standart-header .menu .logo a:visited {
+        color: #fff; }
+    .standart-header .menu .nav .active-link {
+      border-bottom: 3px solid #17bdfc;
+      text-decoration: none;
+      color: #fff; }
+    .standart-header .menu .nav > ul {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row; }
+      .standart-header .menu .nav > ul li {
+        list-style-type: none;
+        margin-left: 30px; }
+        .standart-header .menu .nav > ul li a {
+          color: #e0e0e0;
+          text-transform: uppercase;
+          padding-bottom: 10px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          font-size: 0.8em;
+          transition: .1s;
+          text-shadow: 2px 2px 8px #000000; }
+          .standart-header .menu .nav > ul li a:hover {
+            border-bottom: 3px solid #17bdfc;
+            text-decoration: none; }
