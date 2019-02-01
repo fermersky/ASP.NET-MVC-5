@@ -18,6 +18,8 @@ namespace book_shop_asp
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.LowercaseUrls = true;
         }
     }
 }

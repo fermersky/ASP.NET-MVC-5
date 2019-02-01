@@ -1,7 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -132,7 +136,39 @@ namespace book_shop_asp.Controllers
             SelectList authors = new SelectList(db.Authors, "FirstName", "FirstName");
             ViewBag.Authors = authors;
 
+            //
+            using (var sr = new StreamReader(@"C:\Users\Данил\Desktop\user.json"))
+            {
+                var obj = JObject.Parse(sr.ReadToEnd());
+
+                HttpContext.Response.Write(obj["name"]);
+                HttpContext.Response.Write(obj["age"]);
+                HttpContext.Response.Write(obj["isCool"]);
+                HttpContext.Response.Write(obj["items"]["one"]);
+            }
+
+
+
+            HttpContext.Response.Write(RouteData.Values["controller"]);
+
             return View();
         }
+    }
+
+    public class User
+    {
+        [JsonProperty("first_name")]
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum GenderEnum
+        {
+            Male,
+            Female
+        }
+
+        public GenderEnum Gender { get; set; }
     }
 }
